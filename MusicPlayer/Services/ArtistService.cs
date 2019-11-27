@@ -26,12 +26,12 @@ namespace MusicPlayer.Services
         //    return _Context.Songs.FirstOrDefault(o => o.SongID == id);
         //}
 
-        //public Models.Song Create(Models.Song model)
-        //{
-        //    _Context.Songs.Add(model);
-        //    _Context.SaveChanges();
-        //    return model;
-        //}
+        public Models.Artist Create(Models.Artist model)
+        {
+            _Context.Artists.Add(model);
+            _Context.SaveChanges();
+            return model;
+        }
 
         //public Models.Song Update(Models.Song model)
         //{

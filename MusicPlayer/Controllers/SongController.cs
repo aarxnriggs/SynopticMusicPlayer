@@ -17,6 +17,7 @@ namespace MusicPlayer.Controllers
 
         public SongController(ISongService songService, IArtistService artistService)
         {
+            _SongService = songService;
             _ArtistService = artistService;
         }
         public IActionResult Get()
@@ -39,15 +40,25 @@ namespace MusicPlayer.Controllers
         [HttpPost]
         public IActionResult Create(Models.Song model)
         {
-
             if (ModelState.IsValid)
             {
-                var song = _SongService.Create(model);
-                return View(song);
+
+                if(model.ArtistID == null)
+                {
+                    Models.Artist artist = new Models.Artist
+                    {
+                        FirstName = model.Artist.FirstName,
+                        LastName = model.Artist.LastName
+
+                    };
+
+                    _ArtistService.Create(artist);
+                }
+                _SongService.Create(model);
+                return RedirectToAction("Index", "Home");
             }
 
             return View(model);
-
         }
     }
 }

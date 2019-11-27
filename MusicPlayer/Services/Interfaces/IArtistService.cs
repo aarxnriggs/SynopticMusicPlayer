@@ -8,5 +8,6 @@ namespace MusicPlayer.Services.Interfaces
     public interface IArtistService
     {
         List<Models.Artist> Get();
+        Models.Artist Create(Models.Artist model);
     }
 }

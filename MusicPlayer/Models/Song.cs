@@ -23,18 +23,13 @@ namespace MusicPlayer.Models
         public bool IsDeleted { get; set; }
 
         [ForeignKey("Album")]
-        public Guid? AlbumID { get; set; }
+        public Guid?AlbumID { get; set; }
 
         [ForeignKey("Artist")]
         public Guid ArtistID { get; set; }
 
-        [ForeignKey("Playlist")]
-        public Guid PlaylistID { get; set; }
-
         public virtual Album Album { get; set; }
         public virtual Artist Artist { get; set; }
-        public virtual Playlist Playlist { get; set; }
-
 
 
     }

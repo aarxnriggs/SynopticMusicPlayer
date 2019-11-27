@@ -1,0 +1,138 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+/*player styling*/
+
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background: #e5e5e5;
+    left: 0;
+    border-top: #c0c0c0 1px solid;
+    padding: 10px 15px;
+}
+
+.player .cover-art {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.player .title{
+    font-weight:600;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    position: relative;
+    top: 15px;
+}
+
+.controls .pause{
+    display:none;
+}
+
+.controls i{
+    font-size:30px;
+}
+
+.ui-slider {
+    position: relative;
+    top: 22px;
+}
+
+.fa-volume-up {
+    position: relative;
+    top: 16px;
+}
+
+.ui-widget-header {
+   background: rgb(152, 0, 0);
+}
+
+.ui-slider-handle {
+    background: rgb(152, 0, 0) !important;
+    border-radius: 100%;
+    border: 0 !important;
+}
+
+.playlist img {
+    margin: 10px;
+    width: 90px;
+}
+
+.playlist .card-body {
+    padding: 5px;
+}
+
+.playlist li{
+    padding-left:0;
+}
+
+.playlist li.active {
+    background: rgba(186, 186, 186, 0.05);
+    color: rgb(152, 0, 0);
+    font-weight: bold;
+}
+
